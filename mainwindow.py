@@ -3,6 +3,8 @@ import os
 from pathlib import Path
 import sys
 from PyQt5 import QtWidgets, uic
+import math 
+from math import pi
 
 loads = ['Concentrated load', 'Torque', 'Distributed Load']
 supports = ['Pin', 'Roller', 'Fixed']
@@ -131,16 +133,19 @@ class MainWindow(QtWidgets.QMainWindow):
             self.d2_unit_ = length_units_values[self.d2_unit.currentIndex()]
             self.d1 = self.d1_unit_ * float(self.d1.text())
             self.d2 = self.d1_unit_ * float(self.d2.text())
+            self.inertia = (self.d1*(self.d2**3)/12)
 
         elif self.cross_section_combo.currentIndex() == 1:
             self.d1_unit_ = length_units_values[self.d1_unit.currentIndex()]
             self.d1 = self.d1_unit_ *  float(self.d1.text())
+            self.inertia = (pi*(self.d1**4))/64
 
         elif self.cross_section_combo.currentIndex() == 2:
             self.d1_unit_ = length_units_values[self.d1_unit.currentIndex()]
             self.d2_unit_ = length_units_values[self.d2_unit.currentIndex()]
             self.d1 = self.d1_unit_ * float(self.d1.text())
             self.d2 = self.d2_unit_ * float(self.d2.text())
+            self.inertia = (pi/64) * (self.d1**4 - self.d2**4)
 
         elif self.cross_section_combo.currentIndex() == 3:
             self.d1_unit_ = length_units_values[self.d1_unit.currentIndex()]
@@ -151,7 +156,13 @@ class MainWindow(QtWidgets.QMainWindow):
             self.d2 = self.d2_unit_ * float(self.d2.text())
             self.d3 = self.d3_unit_ * float(self.d3.text())
             self.d4 = self.d4_unit_ * float(self.d4.text())
-    
+            
+            # Ixx = H3b/12 + 2[h3B/12 + hB(H+h)2/4]
+            self.inertia = (((self.d1**3)*self.d3)/12) + 2*((((self.d2**3)*self.d4)/12)+ ((self.d2*self.d4)*((self.d1+self.d2)**2)/4))
+            # self.d1_label.setText('Web Height')
+            # self.d2_label.setText('Flange Height')
+            # self.d3_label.setText('Web Width')
+            # self.d4_label.setText('Flange Width')
 
 app = QtWidgets.QApplication(sys.argv)
 window = MainWindow()
