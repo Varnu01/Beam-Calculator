@@ -5,6 +5,7 @@ import sys
 from PyQt5 import QtWidgets, uic
 import math 
 from math import pi
+import input_window 
 
 loads = ['Concentrated load', 'Torque', 'Distributed Load']
 supports = ['Pin', 'Roller', 'Fixed']
@@ -21,6 +22,7 @@ class MainWindow(QtWidgets.QMainWindow):
         super(MainWindow, self).__init__()
         uic.loadUi("mainwindow.ui",self)
         self.show()
+        self.supportwindow = input_window.MainWindow(self.<parentwindow>,self)
         
         self.E_unit_.addItems(stress_units)
         self.length_unit_.addItems(length_units)

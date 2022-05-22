@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>370</width>
+    <height>350</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,10 +21,49 @@
      </property>
      <widget class="QWidget" name="page_1">
       <layout class="QGridLayout" name="gridLayout_3">
-       <item row="0" column="0">
+       <item row="1" column="0">
         <layout class="QGridLayout" name="gridLayout_2">
-         <item row="3" column="2">
-          <widget class="QComboBox" name="location_unit"/>
+         <item row="5" column="2">
+          <widget class="QComboBox" name="min_unit"/>
+         </item>
+         <item row="6" column="2">
+          <widget class="QComboBox" name="comboBox_3"/>
+         </item>
+         <item row="2" column="1">
+          <widget class="QComboBox" name="distribution_combo"/>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="location_input"/>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Direction</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Minimum </string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="quantity_input"/>
+         </item>
+         <item row="6" column="5">
+          <widget class="QComboBox" name="max_location_unit"/>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Location </string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="5">
+          <widget class="QComboBox" name="min_location_unit"/>
          </item>
          <item row="0" column="0">
           <widget class="QLabel" name="label">
@@ -33,8 +72,34 @@
            </property>
           </widget>
          </item>
-         <item row="1" column="2">
-          <widget class="QComboBox" name="quantity_unit"/>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>Distribution Profile</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="4">
+          <widget class="QLineEdit" name="min_location_input"/>
+         </item>
+         <item row="3" column="1">
+          <widget class="QComboBox" name="direction_input"/>
+         </item>
+         <item row="6" column="1">
+          <widget class="QLineEdit" name="max_input"/>
+         </item>
+         <item row="6" column="3">
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>Max Location</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="4">
+          <widget class="QLineEdit" name="max_location_input"/>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLineEdit" name="min_input"/>
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="quantity">
@@ -43,28 +108,25 @@
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
-          <widget class="QLineEdit" name="quantit_inout"/>
-         </item>
-         <item row="3" column="1">
-          <widget class="QLineEdit" name="location_input"/>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="label_4">
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_7">
            <property name="text">
-            <string>Direction</string>
+            <string>Maximum</string>
            </property>
           </widget>
          </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="label_3">
+         <item row="5" column="3">
+          <widget class="QLabel" name="label_8">
            <property name="text">
-            <string>Location </string>
+            <string>Min Location</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="1" colspan="2">
-          <widget class="QComboBox" name="direction_input"/>
+         <item row="1" column="2">
+          <widget class="QComboBox" name="quantity_unit"/>
+         </item>
+         <item row="4" column="2">
+          <widget class="QComboBox" name="location_unit"/>
          </item>
         </layout>
        </item>
@@ -74,12 +136,8 @@
       <layout class="QGridLayout" name="gridLayout_5">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_4">
-         <item row="1" column="0">
-          <widget class="QLabel" name="label_6">
-           <property name="text">
-            <string>Location</string>
-           </property>
-          </widget>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="support_location_input"/>
          </item>
          <item row="0" column="0">
           <widget class="QLabel" name="label_5">
@@ -88,8 +146,15 @@
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
-          <widget class="QLineEdit" name="support_location_input"/>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>Location</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QComboBox" name="support_location_unit"/>
          </item>
         </layout>
        </item>

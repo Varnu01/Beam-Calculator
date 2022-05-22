@@ -8,6 +8,8 @@ class MainWindow(QtWidgets.QMainWindow):
     def __init__(self,parent_widget):
         super(MainWindow, self).__init__()
         uic.loadUi("load_input.ui",self)
+        self.parent_widget = parent_widget
+        self.parent_widget.layout().addWidget(self)
         self.show()
 
 app = QtWidgets.QApplication(sys.argv)
