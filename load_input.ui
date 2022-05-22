@@ -20,145 +20,311 @@
       <number>0</number>
      </property>
      <widget class="QWidget" name="page_1">
-      <layout class="QGridLayout" name="gridLayout_3">
-       <item row="1" column="0">
-        <layout class="QGridLayout" name="gridLayout_2">
-         <item row="5" column="2">
-          <widget class="QComboBox" name="min_unit"/>
-         </item>
-         <item row="6" column="2">
-          <widget class="QComboBox" name="comboBox_3"/>
-         </item>
-         <item row="2" column="1">
-          <widget class="QComboBox" name="distribution_combo"/>
-         </item>
-         <item row="4" column="1">
-          <widget class="QLineEdit" name="location_input"/>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="label_4">
-           <property name="text">
-            <string>Direction</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="0">
-          <widget class="QLabel" name="label_2">
-           <property name="text">
-            <string>Minimum </string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QLineEdit" name="quantity_input"/>
-         </item>
-         <item row="6" column="5">
-          <widget class="QComboBox" name="max_location_unit"/>
-         </item>
-         <item row="4" column="0">
-          <widget class="QLabel" name="label_3">
-           <property name="text">
-            <string>Location </string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="5">
-          <widget class="QComboBox" name="min_location_unit"/>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="label">
-           <property name="text">
-            <string>Load Input </string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="label_10">
-           <property name="text">
-            <string>Distribution Profile</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="4">
-          <widget class="QLineEdit" name="min_location_input"/>
-         </item>
-         <item row="3" column="1">
-          <widget class="QComboBox" name="direction_input"/>
-         </item>
-         <item row="6" column="1">
-          <widget class="QLineEdit" name="max_input"/>
-         </item>
-         <item row="6" column="3">
-          <widget class="QLabel" name="label_9">
-           <property name="text">
-            <string>Max Location</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="4">
-          <widget class="QLineEdit" name="max_location_input"/>
-         </item>
-         <item row="5" column="1">
-          <widget class="QLineEdit" name="min_input"/>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="quantity">
-           <property name="text">
-            <string>Quantity</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="0">
-          <widget class="QLabel" name="label_7">
-           <property name="text">
-            <string>Maximum</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="3">
-          <widget class="QLabel" name="label_8">
-           <property name="text">
-            <string>Min Location</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="2">
-          <widget class="QComboBox" name="quantity_unit"/>
-         </item>
-         <item row="4" column="2">
-          <widget class="QComboBox" name="location_unit"/>
-         </item>
-        </layout>
-       </item>
-      </layout>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>204</x>
+         <y>283</y>
+         <width>52</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Min Location</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="quantity_unit">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>179</y>
+         <width>55</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="location_unit">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>257</y>
+         <width>55</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="direction_input">
+       <property name="geometry">
+        <rect>
+         <x>86</x>
+         <y>231</y>
+         <width>55</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>7</x>
+         <y>7</y>
+         <width>46</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Load Input </string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>7</x>
+         <y>205</y>
+         <width>75</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Distribution Profile</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="min_location_input">
+       <property name="geometry">
+        <rect>
+         <x>262</x>
+         <y>283</y>
+         <width>30</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="location_input">
+       <property name="geometry">
+        <rect>
+         <x>86</x>
+         <y>257</y>
+         <width>55</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="max_unit">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>309</y>
+         <width>55</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>7</x>
+         <y>257</y>
+         <width>37</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Location </string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="min_unit">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>283</y>
+         <width>55</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>7</x>
+         <y>231</y>
+         <width>37</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Direction</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="distribution_combo">
+       <property name="geometry">
+        <rect>
+         <x>86</x>
+         <y>205</y>
+         <width>55</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="quantity_input">
+       <property name="geometry">
+        <rect>
+         <x>86</x>
+         <y>179</y>
+         <width>55</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>7</x>
+         <y>283</y>
+         <width>41</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Minimum </string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="max_location_unit">
+       <property name="geometry">
+        <rect>
+         <x>296</x>
+         <y>309</y>
+         <width>55</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="min_location_unit">
+       <property name="geometry">
+        <rect>
+         <x>296</x>
+         <y>283</y>
+         <width>55</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>7</x>
+         <y>309</y>
+         <width>40</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Maximum</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="max_input">
+       <property name="geometry">
+        <rect>
+         <x>86</x>
+         <y>309</y>
+         <width>55</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>204</x>
+         <y>309</y>
+         <width>54</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Max Location</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="max_location_input">
+       <property name="geometry">
+        <rect>
+         <x>262</x>
+         <y>309</y>
+         <width>30</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="quantity">
+       <property name="geometry">
+        <rect>
+         <x>7</x>
+         <y>179</y>
+         <width>35</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Quantity</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="min_input">
+       <property name="geometry">
+        <rect>
+         <x>86</x>
+         <y>283</y>
+         <width>55</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
      </widget>
      <widget class="QWidget" name="page_2">
-      <layout class="QGridLayout" name="gridLayout_5">
-       <item row="0" column="0">
-        <layout class="QGridLayout" name="gridLayout_4">
-         <item row="1" column="1">
-          <widget class="QLineEdit" name="support_location_input"/>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="label_5">
-           <property name="text">
-            <string>Support Input</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="label_6">
-           <property name="text">
-            <string>Location</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="2">
-          <widget class="QComboBox" name="support_location_unit"/>
-         </item>
-        </layout>
-       </item>
-      </layout>
+      <widget class="QComboBox" name="support_location_unit">
+       <property name="geometry">
+        <rect>
+         <x>145</x>
+         <y>23</y>
+         <width>55</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>7</x>
+         <y>7</y>
+         <width>56</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Support Input</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>7</x>
+         <y>23</y>
+         <width>34</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Location</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="support_location_input">
+       <property name="geometry">
+        <rect>
+         <x>67</x>
+         <y>23</y>
+         <width>74</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
      </widget>
     </widget>
    </item>
