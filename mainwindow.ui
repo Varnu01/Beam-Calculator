@@ -47,7 +47,11 @@
            </widget>
           </item>
           <item row="8" column="1">
-           <widget class="QComboBox" name="support_combo"/>
+           <widget class="QComboBox" name="support_combo">
+            <property name="placeholderText">
+             <string>Support </string>
+            </property>
+           </widget>
           </item>
           <item row="3" column="0">
            <widget class="QLabel" name="label_4">
@@ -138,7 +142,11 @@
            </widget>
           </item>
           <item row="9" column="1">
-           <widget class="QComboBox" name="load_combo"/>
+           <widget class="QComboBox" name="load_combo">
+            <property name="placeholderText">
+             <string>Loads </string>
+            </property>
+           </widget>
           </item>
           <item row="9" column="2">
            <widget class="QPushButton" name="load_add">

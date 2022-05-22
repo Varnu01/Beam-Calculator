@@ -4,7 +4,7 @@ from pathlib import Path
 import sys
 from PyQt5 import QtWidgets, uic
 
-load = ['Concentrated load', 'Torque', 'Distributed Load']
+loads = ['Concentrated load', 'Torque', 'Distributed Load']
 supports = ['Pin', 'Roller', 'Fixed']
 force_units = ['N', 'KN', 'MN']
 force_unit_values = [1,10**3, 10**6]
@@ -22,6 +22,8 @@ class MainWindow(QtWidgets.QMainWindow):
         
         self.E_unit_.addItems(stress_units)
         self.length_unit_.addItems(length_units)
+        self.support_combo.addItems(supports)
+        self.load_combo.addItems(loads)
 
         self.d1_unit.addItems(length_units)
         self.d2_unit.addItems(length_units)
@@ -150,15 +152,6 @@ class MainWindow(QtWidgets.QMainWindow):
             self.d3 = self.d3_unit_ * float(self.d3.text())
             self.d4 = self.d4_unit_ * float(self.d4.text())
     
-
-
-
-
-
-
-
-
-
 
 app = QtWidgets.QApplication(sys.argv)
 window = MainWindow()
