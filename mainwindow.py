@@ -22,13 +22,15 @@ class MainWindow(QtWidgets.QMainWindow):
         super(MainWindow, self).__init__()
         uic.loadUi("mainwindow.ui",self)
         self.show()
-        self.supportwindow = input_window.MainWindow(self.support_window)
+        
+        self.supportwindow = input_window.MainWindow(self.support_window)   
         self.loadwindow = input_window.MainWindow(self.load_window)
-        # self.supportwindow.setVisible(False)
-        # self.loadwindow.setVisible(False)
-
+        
+        self.supportwindow.setVisible(False)
+        self.loadwindow.setVisible(False)
         self.support_combo.currentIndexChanged.connect(self.load_support_call)
         self.load_combo.currentIndexChanged.connect(self.load_support_call)
+        
         self.E_unit_.addItems(stress_units)
         self.length_unit_.addItems(length_units)
         self.support_combo.addItems(supports)
@@ -175,13 +177,8 @@ class MainWindow(QtWidgets.QMainWindow):
             
             # Ixx = H3b/12 + 2[h3B/12 + hB(H+h)2/4]
             self.inertia = (((self.d1**3)*self.d3)/12) + 2*((((self.d2**3)*self.d4)/12)+ ((self.d2*self.d4)*((self.d1+self.d2)**2)/4))
-            # self.d1_label.setText('Web Height')
-            # self.d2_label.setText('Flange Height')
-            # self.d3_label.setText('Web Width')
-            # self.d4_label.setText('Flange Width')
+    
             
- 
-
 
 app = QtWidgets.QApplication(sys.argv)
 window = MainWindow()

@@ -13,24 +13,31 @@ length_units_values = [1, 10**-3, 10**-2]
 distribution_profile = ['rectangular', 'triangle/trapezoidal']
 direction = ['upwards', 'downwards']
 
-class MainWindow(QtWidgets.QMainWindow):
+class MainWindow(QtWidgets.QWidget):
     def __init__(self,parent_widget):
         super(MainWindow, self).__init__()
-        # uic.loadUi("load_input.ui",self)
-        self.parent_widget = parent_widget
-        uic.loadUi("load_input.ui")
 
-        # self.quantity_unit.addItems(force_units)
-        # self.distribution_combo.addItems(distribution_profile)
-        # self.direction_input.addItems(direction)
-        # self.location_unit.addItems(length_units)
-        # self.min_unit.addItems(force_units)
-        # self.max_unit.addItems(force_units)
-        # self.min_location_unit.addItems(length_units)
-        # self.max_location_unit.addItems(length_units)
+        self.parent_widget = parent_widget 
+        uic.loadUi("load_input.ui",self.parent_widget)
+        self.parent_widget.layout().addWidget(self)
+
+        """ my many attempts at loading the widget into the parent"""
+        # ui_path = os.path.join(os.path.dirname(__file__), "load_input.ui")
+        # self.form = uic.loadUi(ui_path,parent_widget)
+        # uic.loadUi("load_input.ui",self)
+        # parent_widget.layout().addWidget(self)
+
+        self.quantity_unit.addItems(force_units)
+        self.distribution_combo.addItems(distribution_profile)
+        self.direction_input.addItems(direction)
+        self.location_unit.addItems(length_units)
+        self.min_unit.addItems(force_units)
+        self.max_unit.addItems(force_units)
+        self.min_location_unit.addItems(length_units)
+        self.max_location_unit.addItems(length_units)
     
     def setPage(self,mode):
-        """Mode = 0 for  load and 1 for supports"""
+        """Mode = 0 for load and 1 for supports"""
         if mode == 0:
             self.input_page.setCurrentIndex(0)
         elif mode == 1:
