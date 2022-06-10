@@ -28,8 +28,8 @@ class MainWindow(QtWidgets.QMainWindow):
         
         self.supportwindow.setVisible(False)
         self.loadwindow.setVisible(False)
-        self.support_combo.currentIndexChanged.connect(self.load_support_call)
-        self.load_combo.currentIndexChanged.connect(self.load_support_call)
+        self.support_combo.currentIndexChanged.connect(self.support_call)
+        self.load_combo.currentIndexChanged.connect(self.load_call)
         
         self.E_unit_.addItems(stress_units)
         self.length_unit_.addItems(length_units)
@@ -45,12 +45,27 @@ class MainWindow(QtWidgets.QMainWindow):
         self.cross_section_combo.currentIndexChanged.connect(self.beam_dimensions_ui)
 
 
-    def load_support_call(self):
-        if self.support_combo.currentIndexChanged:
-            self.mode=1 
-        elif self.load_combo.currentIndexChanged:
-            self.mode=0 
-        self.supportwindow.setPage(self.mode)
+    def load_call(self):
+        self.loadwindow.setVisible(True)
+        self.supportwindow.setVisible(False)
+        mode = 0
+        mode_config = None
+        index = self.load_combo.currentIndex()
+        if loads[index] == 'Distributed Load':
+            mode_config = 0
+        else: 
+            mode_config = 1 
+    
+        self.loadwindow.setPage(mode)
+        self.loadwindow.inputConfig(mode_config)
+
+    def support_call(self):
+        self.supportwindow.setVisible(True)
+        self.loadwindow.setVisible(False)
+        mode = 1  
+        self.supportwindow.setPage(mode)
+        
+
 
     # def process_load(self):
 

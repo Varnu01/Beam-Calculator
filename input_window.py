@@ -18,7 +18,7 @@ class MainWindow(QtWidgets.QWidget):
         super(MainWindow, self).__init__()
 
         self.parent_widget = parent_widget 
-        uic.loadUi("load_input.ui",self.parent_widget)
+        uic.loadUi("load_input.ui",self)
         self.parent_widget.layout().addWidget(self)
 
         """ my many attempts at loading the widget into the parent"""
@@ -35,13 +35,60 @@ class MainWindow(QtWidgets.QWidget):
         self.max_unit.addItems(force_units)
         self.min_location_unit.addItems(length_units)
         self.max_location_unit.addItems(length_units)
-    
+        self.support_location_unit.addItems(length_units)
+
     def setPage(self,mode):
         """Mode = 0 for load and 1 for supports"""
         if mode == 0:
             self.input_page.setCurrentIndex(0)
         elif mode == 1:
-            self.input_page.setCurrentIndex(1)    
+            self.input_page.setCurrentIndex(1)
+    
+    def inputConfig(self,type):
+        """ set how the input page should look based on the input type """
+        if type != 0:
+            self.distribution_combo.setVisible(False)
+            self.min_input.setVisible(False)
+            self.max_input.setVisible(False)
+            self.min_unit.setVisible(False)
+            self.max_unit.setVisible(False)
+            self.min_label.setVisible(False)
+            self.max_label.setVisible(False)
+            self.max_location_input.setVisible(False)
+            self.min_location_input.setVisible(False)
+            self.max_location_unit.setVisible(False)
+            self.min_location_unit.setVisible(False)
+            self.max_location_label.setVisible(False)
+            self.min_location_label.setVisible(False)
+
+            self.location_input.setVisible(True)
+            self.location_unit.setVisible(True)
+            self.location_label.setVisible(True)
+
+        elif type == 0:
+            self.distribution_combo.setVisible(True)
+            self.min_input.setVisible(True)
+            self.max_input.setVisible(True)
+            self.min_unit.setVisible(True)
+            self.max_unit.setVisible(True)
+            self.min_label.setVisible(True)
+            self.max_label.setVisible(True)
+            
+            self.max_location_input.setVisible(True)
+            self.min_location_input.setVisible(True)
+            self.max_location_unit.setVisible(True)
+            self.min_location_unit.setVisible(True)
+            self.max_location_label.setVisible(True)
+            self.min_location_label.setVisible(True)
+
+            self.location_input.setVisible(False)
+            self.location_unit.setVisible(False)
+            self.location_label.setVisible(False)
+        
+    
+
+    
+        
 
 # app = QtWidgets.QApplication(sys.argv)
 # window = MainWindow()

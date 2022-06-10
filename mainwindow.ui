@@ -23,12 +23,108 @@
       <widget class="QWidget" name="page"/>
       <widget class="QWidget" name="page_2">
        <layout class="QGridLayout" name="gridLayout_2">
+        <item row="2" column="0">
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="1" column="0">
+           <widget class="QTableView" name="tableView"/>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Supports</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QTableView" name="tableView_2"/>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>Loads</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="pushButton">
+            <property name="text">
+             <string>Check</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="text">
+             <string>Run </string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
         <item row="1" column="0">
          <layout class="QGridLayout" name="gridLayout">
+          <item row="4" column="2">
+           <widget class="QComboBox" name="d1_unit"/>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="beam_length_in"/>
+          </item>
+          <item row="5" column="2">
+           <widget class="QComboBox" name="d2_unit"/>
+          </item>
           <item row="6" column="1">
            <widget class="QLineEdit" name="d3">
             <property name="enabled">
              <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="2">
+           <widget class="QComboBox" name="d3_unit"/>
+          </item>
+          <item row="9" column="1">
+           <widget class="QComboBox" name="support_combo">
+            <property name="placeholderText">
+             <string>Support </string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Beam Cross Section </string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="cross_section_combo">
+            <property name="currentText">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>Select a cross-section</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLineEdit" name="d4"/>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="d1"/>
+          </item>
+          <item row="1" column="2">
+           <widget class="QComboBox" name="E_unit_"/>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="d2"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="E_in"/>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="d2_label">
+            <property name="text">
+             <string>d2</string>
             </property>
            </widget>
           </item>
@@ -39,30 +135,17 @@
             </property>
            </widget>
           </item>
-          <item row="7" column="2">
-           <widget class="QComboBox" name="d4_unit"/>
-          </item>
-          <item row="11" column="0">
-           <widget class="QLabel" name="label">
-            <property name="text">
-             <string>Additional Load Inputs </string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <widget class="QLineEdit" name="d1"/>
-          </item>
-          <item row="5" column="0">
-           <widget class="QLabel" name="d2_label">
-            <property name="text">
-             <string>d2</string>
-            </property>
-           </widget>
-          </item>
           <item row="9" column="2">
            <widget class="QPushButton" name="support_add">
             <property name="text">
              <string>Add</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="d4_label">
+            <property name="text">
+             <string>d4</string>
             </property>
            </widget>
           </item>
@@ -73,12 +156,35 @@
             </property>
            </widget>
           </item>
-          <item row="11" column="2">
-           <widget class="QPushButton" name="load_add">
-            <property name="text">
-             <string>Add</string>
+          <item row="11" column="1">
+           <widget class="QComboBox" name="load_combo">
+            <property name="placeholderText">
+             <string>Loads </string>
             </property>
            </widget>
+          </item>
+          <item row="11" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Additional Load Inputs </string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0" colspan="3">
+           <layout class="QVBoxLayout" name="support_window"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Beam Length</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QComboBox" name="length_unit_"/>
+          </item>
+          <item row="7" column="2">
+           <widget class="QComboBox" name="d4_unit"/>
           </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label_9">
@@ -94,64 +200,12 @@
             </property>
            </widget>
           </item>
-          <item row="7" column="0">
-           <widget class="QLabel" name="d4_label">
+          <item row="11" column="2">
+           <widget class="QPushButton" name="load_add">
             <property name="text">
-             <string>d4</string>
+             <string>Add</string>
             </property>
            </widget>
-          </item>
-          <item row="5" column="1">
-           <widget class="QLineEdit" name="d2"/>
-          </item>
-          <item row="6" column="2">
-           <widget class="QComboBox" name="d3_unit"/>
-          </item>
-          <item row="7" column="1">
-           <widget class="QLineEdit" name="d4"/>
-          </item>
-          <item row="1" column="1">
-           <widget class="QLineEdit" name="E_in"/>
-          </item>
-          <item row="9" column="1">
-           <widget class="QComboBox" name="support_combo">
-            <property name="placeholderText">
-             <string>Support </string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_3">
-            <property name="text">
-             <string>Beam Length</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="QComboBox" name="cross_section_combo">
-            <property name="currentText">
-             <string/>
-            </property>
-            <property name="placeholderText">
-             <string>Select a cross-section</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="2">
-           <widget class="QComboBox" name="d2_unit"/>
-          </item>
-          <item row="11" column="1">
-           <widget class="QComboBox" name="load_combo">
-            <property name="placeholderText">
-             <string>Loads </string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QLineEdit" name="beam_length_in"/>
-          </item>
-          <item row="2" column="2">
-           <widget class="QComboBox" name="length_unit_"/>
           </item>
           <item row="6" column="0">
            <widget class="QLabel" name="d3_label">
@@ -161,31 +215,7 @@
            </widget>
           </item>
           <item row="12" column="0" colspan="3">
-           <layout class="QVBoxLayout" name="a2">
-            <item>
-             <widget class="QWidget" name="load_window" native="true"/>
-            </item>
-           </layout>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_4">
-            <property name="text">
-             <string>Beam Cross Section </string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="2">
-           <widget class="QComboBox" name="d1_unit"/>
-          </item>
-          <item row="1" column="2">
-           <widget class="QComboBox" name="E_unit_"/>
-          </item>
-          <item row="10" column="0" colspan="3">
-           <layout class="QVBoxLayout" name="a1">
-            <item>
-             <widget class="QWidget" name="support_window" native="true"/>
-            </item>
-           </layout>
+           <layout class="QVBoxLayout" name="load_window"/>
           </item>
          </layout>
         </item>
@@ -201,7 +231,7 @@
      <x>0</x>
      <y>0</y>
      <width>480</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuBeam_Calculator">

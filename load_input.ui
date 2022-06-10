@@ -38,7 +38,7 @@
         <widget class="QLineEdit" name="location_input"/>
        </item>
        <item row="5" column="3">
-        <widget class="QLabel" name="label_8">
+        <widget class="QLabel" name="min_location_label">
          <property name="text">
           <string>Min Location</string>
          </property>
@@ -58,7 +58,7 @@
         </widget>
        </item>
        <item row="6" column="0">
-        <widget class="QLabel" name="label_7">
+        <widget class="QLabel" name="max_label">
          <property name="text">
           <string>Maximum</string>
          </property>
@@ -77,7 +77,7 @@
         <widget class="QComboBox" name="distribution_combo"/>
        </item>
        <item row="4" column="0">
-        <widget class="QLabel" name="label_3">
+        <widget class="QLabel" name="location_label">
          <property name="text">
           <string>Location </string>
          </property>
@@ -93,14 +93,14 @@
         <widget class="QComboBox" name="min_location_unit"/>
        </item>
        <item row="5" column="0">
-        <widget class="QLabel" name="label_2">
+        <widget class="QLabel" name="min_label">
          <property name="text">
           <string>Minimum </string>
          </property>
         </widget>
        </item>
        <item row="6" column="3">
-        <widget class="QLabel" name="label_9">
+        <widget class="QLabel" name="max_location_label">
          <property name="text">
           <string>Max Location</string>
          </property>
