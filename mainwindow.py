@@ -30,6 +30,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self.loadwindow.setVisible(False)
         self.support_combo.currentIndexChanged.connect(self.support_call)
         self.load_combo.currentIndexChanged.connect(self.load_call)
+
+        self.support_add.clicked.connect(self.support_list)
+        self.load_add.clicked.connect(self.load_list)
         
         self.E_unit_.addItems(stress_units)
         self.length_unit_.addItems(length_units)
@@ -58,6 +61,12 @@ class MainWindow(QtWidgets.QMainWindow):
     
         self.loadwindow.setPage(mode)
         self.loadwindow.inputConfig(mode_config)
+    
+    def load_list(self):
+        None
+
+    def support_list(self):
+        None
 
     def support_call(self):
         self.supportwindow.setVisible(True)
@@ -66,8 +75,6 @@ class MainWindow(QtWidgets.QMainWindow):
         self.supportwindow.setPage(mode)
         
 
-
-    # def process_load(self):
 
     def beam_dimensions_ui(self):
         if self.cross_section_combo.currentIndex() == 0:

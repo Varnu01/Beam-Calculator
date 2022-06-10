@@ -84,7 +84,20 @@ class MainWindow(QtWidgets.QWidget):
             self.location_input.setVisible(False)
             self.location_unit.setVisible(False)
             self.location_label.setVisible(False)
-        
+    
+    def process_input(self,mode, mode_config):
+        """Mode = 0 for load and 1 for supports, Mode_config = 0 for dist load, 1 for rest"""
+        if mode == 0:
+            self.quantity = float(self.quantity_input.text()) 
+            self.quant_unit = force_unit_values[self.quantity_unit.currentIndex()]
+            if mode_config == 0:
+                self.dist_profile = distribution_profile[self.distribution_combo.currentIndex()]
+                # self.min = <>
+                # self.max = <>
+                # self.min_unit 
+            
+
+
     
 
     
